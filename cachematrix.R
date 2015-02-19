@@ -13,8 +13,8 @@ makeCacheMatrix <- function(x = matrix()) {
         m <- NULL                         ##when makeCacheMatrix is called by cacheSolve, 
                                           ##cacheSolve try at first to read m, which is why m should be set
         
-        set <- function(y) {              ##when a new matrix passed to makeCacheMatrix
-                x <<- y                   ##this internal function store the new matrix externally
+        set <- function(y) {              
+                x <<- y                   ##store the new matrix externally (cache)
                 m <<- NULL                ##and clean any stored inverse matrix
         }
         
